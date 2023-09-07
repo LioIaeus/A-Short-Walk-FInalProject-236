@@ -21,15 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
         content.innerHTML = `
         <h1>${story.sceneOne.title}</h1>
         <p>${story.sceneOne.story}</p>
-        <div>
-            <input id = "radio1" type = "radio" name = "choice"></input>
-            <label for "radio1">Run into the yard!</label>
-        </div>
-        <div>
-            <input id = "radio2" type = "radio" name = "choice"></input>
-            <label for "radio2">Run back inside!!</label>
-        </div>
-
+        ${getInputs()}
+        
         <button>Move On</button>
        ` 
     })
@@ -45,7 +38,5 @@ function getInputs() {
             <label for "radio1">${story.sceneOne.choices[i].choice}</label>
         </div>`
         }
-        return input
-        console.log(story.sceneOne.choices[i].choice)
+        return input;
     }
-}
